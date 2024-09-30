@@ -1,0 +1,25 @@
+.container{
+    background-color: blueviolet;
+    padding-top: 100px;
+    padding-bottom: 50px;
+    margin-top: 100px;
+    margin-left: 100px;
+}
+.child1,.child2,.child3{
+    background-color: aquamarine;
+    border: 3px solid red;
+    height: 100px;
+    display: inline-block;
+    width: 100px;
+    margin: 20px;
+    padding: 20px;
+}
+.child1{
+    background-color: yellow;
+}
+.child2{
+    background-color: lightgreen;
+}
+.child3{
+    background-color: orange;
+}
