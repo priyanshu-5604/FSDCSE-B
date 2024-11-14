@@ -1,68 +1,144 @@
-console.log("Welcome");
-var a=12;
-console.log(a);
-if(a>10){
-    var a=23;
-    console.log("a inside"+a);
+// console.log('Welcome to JS');
+// const a = 12
+// console.log(a);
+// if(a > 10)
+// {
+//     a = 23;
+//     let b = 24;
+//     console.log("a is inside the condition : " + a);
+// }
+// console.log("b is outside the condition : " + b);
+
+/* let a = 12;
+let b = "12";
+console.log(typeof b);
+
+let today = Date();
+console.log(today);
+
+if(a === b){
+    console.log("Welcome");
 }
-console.log("a outside"+a);
-let myname="Amul"
-let col = "ABES"
-let res = `HI,my name is ${myname}`;
-console.log(res);
-
-// Objects in Js 
-
-const student=[
+else
 {
-    sname:"Amit",
-    course:"B.tech",
-    college:"ABES"
+    console.log("Chal nikal")
+} */
+
+/* let myname = "Harshil";
+let college = "ABESEC";
+let result = Hi , my name is ${myname} and I am doing my B-Tech from ${college};
+console.log(result);
+ */
+// Objects in JS
+/* 
+let key = "sname";
+const students = [
+    {
+    sname : "Harshil" , 
+    course : "B-Tech" , 
+    college : "ABESEC"
 },
 {
-    sname:"Amit2",
-    course:"B.tech1",
-    college:"ABES1"
+    sname : "Prabhat",
+    course : "B-Tech" ,
+    college : "ABESEC"
 }
 ]
-console.log(student[1]);
-// console.log("name "+student.sname+" course "+student.course);
-// const {sname}=student;  //destructuring of object
+console.log(students);
+console.log(students[0]);
+console.log(students[1]);
+
+console.log(students[1].sname + " " + students[1].college);
+// console.log("Name : " + students.sname +" " +  "Course : " + students.course);
+// const {sname} = students;
 // console.log(sname);
+// students[key] = "Gupta";
+// console.log(students); */
 
 //function
-function greeting(msg="Welcome"){
-    console.log("good noon "+msg);
-}
-greeting("greetings");
 
-function sum(a,b,c=23){
-    return a+b+c;
-}
-let d = sum(12,20);
-console.log(d);
+// function greeting(msg = "Welcome")
+// {
+//     console.log("Good Morning" + " " + msg);
+// }
+// greeting("Greetings");
 
+// function sum(a,b,c=23)
+// {
+//     return a+b+c;
+// }
+// let data = sum(12 , 20)
+// console.log(data);
 
-// function SelectLanguage(lang){
-//    let data;
-//    if(lang=="c"){
-//        function cCompiler(){
-//            return "ccompiler";
+// function selectLanguage(language)
+// {
+//     let data;
+//     if(language == "C")
+//     {
+//         function cCompiler()
+//         {
+//             return "C Compiler Selected";
 //         }
 //         data = cCompiler();
 //     }
-//     if(lang=="java"){
-//         function jCompiler(){
-//             return "Jcompiler";
+//     if(language == "Java")
+//     {
+//         function javaCompiler()
+//         {
+//             return "Java Compiler Selected";
 //         }
-//         data = jCompiler();
+//         data = javaCompiler();
 //     }
+    
 //     return data;
 // }
-// let result = SelectLanguage("c");
+
+// let result = selectLanguage("C");
 // console.log(result);
 
-console.log("Hello, World");
-let parent = document.getElementsByClassName("parent");
-console.log(parent);
-parent[0].innerText = "Data has changed";
+// console.log("Hello World");
+// let parent = document.getElementsByClassName("parent");
+// console.log(parent);
+// // parent[0].innerText = "Data has changed";
+// // parent[0].innerHTML = "<H1 style=color:red>Hello</H1>"
+
+// const h1=document.createElement("H1");
+// console.log(h1);
+// h1.innerText = "ABES Engineering College";
+// console.log(h1);
+// h1.style.backgroundColor = "cyan";
+// h1.style.color = "red";
+// h1.style.padding = "20px";
+// h1.style.marginLeft="300px";
+// parent[0].appendChild(h1);
+
+// const img = document.createElement("img");
+// img.src = "./Image2.jpg";
+// console.log(img);
+// img.setAttribute("height" , "300");
+// img.setAttribute("width" , "300");
+// parent[0].appendChild(img);
+// parent[0].removeChild(img);
+// function getData()
+// {
+//     console.log("Hi , inside getData function");
+//     parent[0].innerHTML = "<H2 style='color : red'>Hello , Event Handler</H2>";
+// }
+
+// const button = document.getElementsByClassName("btn");
+// console.log(button);
+// button[0].addEventListener("click" ,getData);
+
+const promise=new Promise((resolve, reject)=>{
+    let a=12;
+    if(a>10){
+        resolve("Accepted");
+    }
+    else{
+        reject("Rejected");
+    }
+})
+
+promise.then((msg)=>{console.log(msg)})
+.catch((error)=>{console.log(error)})
+.finally(()=>console.log("All resources have closed"));
