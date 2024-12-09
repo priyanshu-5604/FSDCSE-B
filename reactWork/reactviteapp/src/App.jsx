@@ -1,88 +1,94 @@
-import React from 'react';
+import React from 'react'
 import Student from './Student';
-import './student.css';
-import Usestudentstate from './Usestudentstate';
+import UseStudentState from "./UseStudentState"
 import Imagemanipulation from './Imagemanipulation';
 import MyUseEffect from './MyUseEffect';
-import UseFetchApi from './UseFetchAPI';
+import UseFetchAPI from './UseFetchAPI';
+import Login from './Login'
+import Registration from './Registration' 
 
-function HelloWorld() {
-  const h1 = <h1>Hello World!</h1>
-  const mystyle  ={
-    color:'white',
-    backgroundColor : 'purple'
-  }
-
-  const StudentData = [{
-    college : "ABES Engineering College",
-    Name : "Tom",
-    pic : <img src='https://media.istockphoto.com/id/1369754239/photo/university-student-in-white-background-stock-photo.jpg?s=612x612&w=0&k=20&c=LjFVDfjusWBjYTNliHV9DyXfApPGc8DmgBGEtfVgQ0Q=' height={100} width={100} />,
-    branch : "CSE",
-    roll : 1,
-    section : "B"}
-  ,
-  {
-    college : "ABES Engineering College",
-    Name : "Tammy",
-    pic : <img src='https://commondatastorage.googleapis.com/codeskulptor-demos/riceracer_assets/img/srixner.png' height={100} width={100} />,
-    branch : "CSE",
-    roll : 3,
-    section : "B"
-  },
-  {
-    college : "ABES Engineering College",
-    Name : "Tan",
-    pic : <img src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQZ47HILWuUgVTqOxL-lJ0Jdvo9tpUNIP5X5Q&s' height={100} width={100} />,
-    branch : "CSE",
-    roll : 2,
-    section : "B"
-  }
-]
+function App() {
+  const h1=<h1>Hello World</h1>;
+  const mystyle={
+  color:'red',
+  backgroundColor:'yellow'
+ }
+//  const studentdata =[{
+//   college:"ABES Engineering College",
+//   name:"Kuldeep",
+//   pic:<img src='https://commondatastorage.googleapis.com/codeskulptor-demos/riceracer_assets/img/srixner.png' height={100} width={100}/>,
+//   branch:"CSE",
+//   roll:"230023947937",
+//   section :"B"
+//  },
+//  {
+//   college:"ABES Engineering College",
+//   name:"Deepak",
+//   pic:<img src='https://commondatastorage.googleapis.com/codeskulptor-demos/riceracer_assets/img/srixner.png' height={100} width={100}/>,
+//   branch:"CSE",
+//   roll:"230023947937",
+//   section :"B"
+//  },
+//  {college:"ABES Engineering College",
+//  name:"Amit",
+//  pic:<img src='https://commondatastorage.googleapis.com/codeskulptor-demos/riceracer_assets/img/srixner.png' height={100} width={100}/>,
+//  branch:"CSE",
+//  roll:"30023947937",
+//  section :"B"}]
   return (
-    <div>
-      <h2>Hello</h2>
-    <div>
-      {/* <Usestudentstate></Usestudentstate> */}
-      {/* <Imagemanipulation></Imagemanipulation> */}
-      {/* <MyUseEffect></MyUseEffect> */}
-      <UseFetchApi></UseFetchApi>
-    </div>
-    </div>
-    // <div style={{backgroundColor : 'orange'}}>
-    //   {h1}
-    //   <div style={mystyle}>
-    //     ABES Engineering College
-    //   </div>
-    //   <div style={{display : 'flex'}}>
-    //      {
-    //       StudentData.map(
-    //         (ele) => {
-    //           return <Student data = {ele} />
-    //         }
-    //       )         
-    //      }
-    //     {/*<Student 
-    //     name = 'Harshil' 
-    //     pic = {<img src='https://commondatastorage.googleapis.com/codeskulptor-demos/riceracer_assets/img/srixner.png' height={100} width={100} />}
-    //     branch = ' CSE' 
-    //     roll = '2200320100069' 
-    //     section='B'/>
+//     <div style={{backgroundColor:'cyan'}}>
+//       {h1}
+    
+//     <div style={mystyle}>
+//       ABES Engineering College
+//     </div>
+//     <div  style={{display:'flex'}}>
+//       {/* <Student data ={studentdata[1]}/> */
+//       studentdata.map(
+//         (ele)=>{
+//           return <Student data={ele}/>
+//         }
+//       )
+//       }
+ 
+//       {/* <Student college="ABES Engineering College" 
+//       name="Rahul"
+//       branch="CSE"
+//       roll="2328392"
+//       section="A"
+      
+//       />
 
-    //   <Student college = 'ABES Enginerring College' 
-    //     name = 'Prabhat' 
-    //     pic = {<img src='https://media.istockphoto.com/id/1369754239/photo/university-student-in-white-background-stock-photo.jpg?s=612x612&w=0&k=20&c=LjFVDfjusWBjYTNliHV9DyXfApPGc8DmgBGEtfVgQ0Q=' height={100} width={100} />}
-    //     branch = ' CSE' 
-    //     roll = '2200320100112' 
-    //     section='B'/>
+// <Student college="ABES Engineering College" 
+//       name="Ankit"
+//       pic={<img src='https://commondatastorage.googleapis.com/codeskulptor-demos/riceracer_assets/img/srixner.png' height={100} width={100}/>}
+//       branch="CSE"
+//       roll="787878"
+//       section="A"
+      
+//       />
 
-    //   <Student college = 'ABES Enginerring College' 
-    //     name = 'Priyanshu' 
-    //     pic = {<img src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQZ47HILWuUgVTqOxL-lJ0Jdvo9tpUNIP5X5Q&s' height={100} width={100} />}
-    //     branch = ' CSE' 
-    //     roll = '2200320100169' 
-    //     section='B'/>*/}
-    //     </div>
-    //   </div>
-  );
+//       <Student college="ABES Engineering College" 
+//       name="Amit Tomer"
+//       branch="CSE"
+//       roll="6754890"
+//       section="A"
+      
+//       /> */}
+//     </div>
+//     </div>
+  <div>
+    <h2>Hello using stateHook</h2>
+    <div>
+      {/* <UseStudentState/> */}
+      {/* <Imagemanipulation/> */}
+      {/* <MyUseEffect/> */}
+      {/* <UseFetchAPI/> */}
+      <Login/>
+      <Registration/>
+    </div>
+  </div>
+  )
 }
-export default HelloWorld;
+
+export default App
